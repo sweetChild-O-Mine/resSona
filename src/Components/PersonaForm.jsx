@@ -300,7 +300,7 @@ export const PersonaForm = () => {
         disabled={loading}    //btn will be disabled when laoding is happening 
         className="w-full max-w-3xl border border-neutral-500 py-3 px-6 text-lg  bg-neutral-800/60 text-white font-bold rounded-lg shadow-lg hover:bg-neutral-700/60 cursor-pointer transition-colors duration-100 disabled:bg-neutral-800/50  "
         >
-          {loading ? 'Generating...(be patient': 'Generate Prompt'}
+          {loading ? 'Generating...(be patient nikkah!!)': 'Generate Prompt'}
         </button>
 
         {/* if error is there then show it nah nigga */}
