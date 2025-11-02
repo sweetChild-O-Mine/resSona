@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Cormorant+Upright:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Cormorant+Upright:wght@300;400;500;600;700&family=Petit+Formal+Script&display=swap');
 
 
 @layer utilities {
@@ -16,4 +20,58 @@
   .scrollbar-hidden {
     -ms-overflow-style: none;
   }
+}
+
+.poiret {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.delius {
+  font-family: "Delius", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bellefair {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cormo-light {
+  font-family: "Cormorant Upright", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.cormo-regular {
+  font-family: "Cormorant Upright", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cormo-medium {
+  font-family: "Cormorant Upright", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.cormo-semibold {
+  font-family: "Cormorant Upright", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.cormo-bold {
+  font-family: "Cormorant Upright", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.petit {
+  font-family: "Petit Formal Script", cursive;
+  font-weight: 400;
+  font-style: normal;
 }

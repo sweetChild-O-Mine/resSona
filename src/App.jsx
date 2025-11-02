@@ -1,9 +1,10 @@
-import { useState } from 'react'
 import { PersonaForm } from './Components/PersonaForm.jsx'
 import hero from './assets/hero3.jpg'
+import { Navbar } from './Components/Navbar.jsx'
+import { Hero } from './Components/Hero.jsx'
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -19,7 +20,9 @@ function App() {
         <div className="absolute inset-0 bg-black/60"/>
 
         {/* now our main container div for the thinggs and actual stuff */}
-        <div className="relative z-10 min-h-screen w-full flex justify-center items-center ">
+        <div className="relative z-10 min-h-screen py-2 w-full max-w-7xl  mx-auto  ">
+        <Navbar />
+        <Hero />
         <PersonaForm />
 
         </div>
