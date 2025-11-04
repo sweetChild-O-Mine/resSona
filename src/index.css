@@ -23,6 +23,16 @@
   }
 }
 
+/* scollbar globally */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
 .poiret {
   font-family: "Poiret One", sans-serif;
   font-weight: 500;
