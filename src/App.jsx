@@ -20,7 +20,7 @@ function App() {
         <div className="absolute inset-0 bg-black/60"/>
 
         {/* now our main container div for the thinggs and actual stuff */}
-        <div className="relative z-10 min-h-screen py-2 w-full max-w-7xl  mx-auto  ">
+        <div className="relative z-10 min-h-screen py-2 w-full lg:max-w-7xl  mx-auto  ">
         <Navbar />
         <Hero />
         <PersonaForm />

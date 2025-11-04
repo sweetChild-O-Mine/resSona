@@ -3,7 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Cormorant+Upright:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Cormorant+Upright:wght@300;400;500;600;700&family=Petit+Formal+Script&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Felipa&display=swap');
 
 @layer utilities {
   /* Chrome, Safari and Opera */
@@ -72,6 +73,18 @@
 
 .petit {
   font-family: "Petit Formal Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.eagle {
+  font-family: "Eagle Lake", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.felipa {
+  font-family: "Felipa", serif;
   font-weight: 400;
   font-style: normal;
 }
