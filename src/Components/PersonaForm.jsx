@@ -53,10 +53,32 @@ export const PersonaForm = () => {
 
   // handler for the buttons basically btns ke text update karega jab bhi click hoga...or simpley which field to update and with what value to update
   const handlePresetClick = (fieldName, value) => { 
-    setFormData((prevData) => ({
-      ...prevData,
-      [fieldName] : value
-    }))
+    setFormData((prevData) => {
+      const currentValue = prevData[fieldName].trim()
+
+      // convert string into arr nigg
+      const valuesArray = currentValue.split(',').map(v => v.trim())
+
+      if(valuesArray.includes(value)) {
+        // remove the nigg
+        const filtered = valuesArray.filter(v => v != value)
+        return {
+          ...prevData,
+          [fieldName] : filtered.join(', ')     //convert the arr into string
+        }
+      } else {
+        // add that nigg
+        const newValue = currentValue
+          ? `${currentValue}, ${value} `
+          : value
+
+          return {
+            ...prevData,
+            [fieldName]: newValue
+          }
+      }
+
+    })
    }
 
 
@@ -234,15 +256,28 @@ export const PersonaForm = () => {
             />
             {/* div for the buttons and all */}
             <div className="flex flex-wrap justify-center mt-3 gap-2 ">
-              {rolePresets.map((role) => (
+              {rolePresets.map((role) => {
+              const isSelected = formData.llmRole
+                .split(',')
+                .map(v => v.trim())
+                .includes(role)
+
+              return (
                 <button 
+
                 key={role}
                 onClick={() => handlePresetClick('llmRole', role)}
                 type='button' //form submiisoin rokne ke liye we gotta define the type here
-                className="px-3 py-[4.5px] rounded-full bg-neutral-700/50 text-neutral-300 text-sm hover:bg-neutral-600/70 cursor-pointer ">
+                className={`px-3 py-[4.5px] rounded-full text-sm cursor-pointer
+                ${isSelected ? 'bg-neutral-200 text-neutral-950 hover:bg-neutral-200 hover:text-neutral-950  '
+                            : 'bg-neutral-700/50 text-neutral-300 hover:bg-neutral-700'
+                }
+                `} >
                   {role}
                 </button>
-              ) )}
+
+              )
+              } )}
             </div>
           </div>
 
@@ -263,15 +298,26 @@ export const PersonaForm = () => {
             />
             {/* div for the buttona n all */}
             <div className="flex flex-wrap justify-center mt-3 gap-2">
-              {tonePresets.map((tone) => (
+              {tonePresets.map((tone) => {
+                const isSelected = formData.llmTone
+                  .split(', ')
+                  .map(v => v.trim())
+                  .includes(tone)
+
+                return (
                 <button 
                 type='button'
                 key={tone}
                 onClick={() => handlePresetClick('llmTone', tone) }
-                className="px-3 py-[4.5px] rounded-full bg-neutral-700/50 text-neutral-300 text-sm hover:bg-neutral-600/70 cursor-pointer">
+                className={`px-3 py-[4.5px] rounded-full text-sm cursor-pointer
+                ${isSelected ? 'bg-neutral-200 text-neutral-950 hover:bg-neutral-200 hover:text-neutral-950  '
+                            : 'bg-neutral-700/50 text-neutral-300 hover:bg-neutral-700'
+                }
+                `} >
                   {tone}
                 </button>
-              ))}
+                )
+})}
             </div>
 
           </div>

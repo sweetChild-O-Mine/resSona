@@ -2,6 +2,8 @@ import { PersonaForm } from './Components/PersonaForm.jsx'
 import hero from './assets/hero3.jpg'
 import { Navbar } from './Components/Navbar.jsx'
 import { Hero } from './Components/Hero.jsx'
+import { Footer } from './Components/Footer.jsx'
+
 
 
 function App() {
@@ -24,6 +26,7 @@ function App() {
         <Navbar />
         <Hero />
         <PersonaForm />
+        <Footer />
 
         </div>
 
