@@ -67,11 +67,11 @@ export default async function handler(req, res) {
 
         GENERATE a system prompt that:
 
-        1. **STORES user profile in memory** (not for immediate conversation)
+        1. **STORES every information of user profile in memory** (not for immediate conversation)
         2. Uses **declarative memory statements** like:
         - "Remember: ${formData.nickname} is a ${formData.profession}..."
-        - "User's goals include: ${formData.goals}..."
-        - "Always maintain ${formData.llmTone} tone when responding..."
+        - "Remember User's goals which include: ${formData.goals}..."
+        - "Remember to Always maintain ${formData.llmTone} tone when responding..."
 
         3. **ENDS with SILENT memory lock** (no acknowledgment request):
         - "Store this profile permanently."
